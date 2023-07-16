@@ -67,7 +67,7 @@ body * {
   margin: 4px auto;
 }
 
-#switch button {
+#switchBtn button {
   width: 32px;
   height: 32px;
   background: white var(--switch-bg-url) no-repeat center;
@@ -81,15 +81,15 @@ body * {
   animation: slide-back 0.2s;
 }
 
-.light #switch button {
+.light #switchBtn button {
   animation: slide-in 0.2s forwards;
 }
 
-#switch button:hover {
+#switchBtn button:hover {
   outline: 8px solid var(--highlight-color);
 }
 
-#switch span {
+#switchBtn span {
   display: block;
   width: 64px;
   height: 24px;
@@ -156,4 +156,34 @@ footer {
 }
 footer a {
   text-decoration: none;
+}
+
+/* Media Query */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(../assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(../assets/bg-desktop-light.jpg);
+  }
+}
+
+/* Animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
