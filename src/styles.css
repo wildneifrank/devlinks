@@ -27,7 +27,6 @@
 body {
   background: var(--bg-url) no-repeat center/cover;
   height: 100vh;
-  width: 100vw;
 }
 
 body * {
@@ -38,6 +37,7 @@ body * {
 #container {
   width: 100%;
   max-width: 588px;
+  margin: 0px auto;
   padding: 0px 24px;
   display: flex;
   flex-direction: column;
